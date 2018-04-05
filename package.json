@@ -1,5 +1,5 @@
 {
-  "name": "react-intl-safe-html",
+  "name": "@folio/react-intl-safe-html",
   "version": "1.0.0",
   "description": "Sanitized HTML component",
   "main": "build/index.js",
