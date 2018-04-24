@@ -6,7 +6,10 @@ class SafeHTMLMessage extends React.Component {
   render () {
     const {intl, id, values, tagName} = this.props;
     const msg = intl.formatHTMLMessage({id}, values);
-    return React.createElement(tagName || 'span', {dangerouslySetInnerHTML:{ __html: sanitizeHtml(msg)}}, null);
+    const options = {
+      allowedTags: [ 'b', 'i', 'em', 'strong', 'a', 'span' ]
+    }
+    return React.createElement(tagName || 'span', {dangerouslySetInnerHTML:{ __html: sanitizeHtml(msg, options)}}, null);
   }
 }
 export default injectIntl(SafeHTMLMessage);
