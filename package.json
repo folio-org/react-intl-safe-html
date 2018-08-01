@@ -1,6 +1,6 @@
 {
   "name": "@folio/react-intl-safe-html",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Sanitized HTML component",
   "main": "src/index.js",
   "repository": "git@github.com:folio-org/react-intl-safe-html.git",
@@ -19,6 +19,6 @@
     "react-intl": "^2.3.0"
   },
   "dependencies": {
-    "sanitize-html": "^1.18.2"
+    "sanitize-html": "1.18.2"
   }
 }
