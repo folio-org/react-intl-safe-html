@@ -1,5 +1,8 @@
 # Change history for react-intl-safe-html
 
+## [1.0.3](https://github.com/folio-org/react-intl-safe-html/tree/v1.0.3) (2019-05-23)
+* Remove all devDeps, which `depcheck` says are all unnecessary. Refs STRIPES-630
+
 ## [1.0.2](https://github.com/folio-org/react-intl-safe-html/tree/v1.0.2) (2018-08-01)
 * Lock version of sanitize-html, fixes STRIPES-545
 
