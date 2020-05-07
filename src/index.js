@@ -1,19 +1,24 @@
 import React from 'react';
-import { injectIntl } from 'react-intl';
-import sanitizeHtml from 'sanitize-html';
+import { FormattedMessage } from 'react-intl';
 
-class SafeHTMLMessage extends React.Component {
-  render () {
-    const {intl, id, values, tagName} = this.props;
-    const msg = intl.formatHTMLMessage({id}, values);
-    const options = {
-      allowedTags: [ 'b', 'i', 'em', 'strong', 'a', 'span' ],
-      allowedAttributes: {
-        'a': [ 'href' ],
-        '*': [ 'alt', 'class' ]
-      }
-    }
-    return React.createElement(tagName || 'span', {dangerouslySetInnerHTML:{ __html: sanitizeHtml(msg, options)}}, null);
-  }
-}
-export default injectIntl(SafeHTMLMessage);
+const SafeHTMLMessage = ({
+  id,
+  tagName,
+  values,
+}) => (
+  <FormattedMessage
+    id={id}
+    tagName={tagName}
+    values={{
+      b: (...chunks) => <b>{chunks}</b>,
+      i: (...chunks) => <i>{chunks}</i>,
+      em: (...chunks) => <em>{chunks}</em>,
+      strong: (...chunks) => <strong>{chunks}</strong>,
+      span: (...chunks) => <span>{chunks}</span>,
+      div: (...chunks) => <div>{chunks}</div>,
+      ...values,
+    }}
+  />
+);
+
+export default SafeHTMLMessage;

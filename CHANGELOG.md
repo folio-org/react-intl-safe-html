@@ -1,5 +1,10 @@
 # Change history for react-intl-safe-html
 
+## 2.0.0 (IN PROGRESS)
+* Support `react-intl` v4. STRIPES-672
+* BREAKING: Translation strings that set element attributes are no longer supported.
+* BREAKING: `<a>` is no longer supported since it's not useful without attributes.
+
 ## [1.0.3](https://github.com/folio-org/react-intl-safe-html/tree/v1.0.3) (2019-05-23)
 * Remove all devDeps, which `depcheck` says are all unnecessary. Refs STRIPES-630
 

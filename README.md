@@ -1,7 +1,20 @@
 # react-intl-safe-html
-Sanitized HTML component
 
-Usage:
+Wrapper component over react-intl's `FormattedMessage`. By default, `<FormattedMessage>` requires explicit information about how to render tags. For example:
+```
+<FormattedMessage id="test" values={{ b: (...chunks) => <strong>{chunks}</strong> }} />
+```
+
+This component provides some values "out of the box". They are:
+- `<b>`
+- `<i>`
+- `<em>`
+- `<strong>`
+- `<span>`
+- `<div>`
+
+
+## Usage:
 
 ```
 import SafeHTMLMessage from 'react-intl-safe-html';
@@ -17,25 +30,6 @@ Example translations/en.json:
 }
 ```
 
-By default, `react-intl` will escape HTML in strings to protect the user from dangerous HTML (`script` tags). The `SafeHTMLMessage` component sanitizes HTML strings for safe presentation.
+## Attributes and Styling
 
-### Inline styles
-
-Inline CSS cannot be sanitized, so it is not an allowed attribute. For example, `<span style="color:red">blah</span`. 
-
-> The style attribute and style tags should be consolidated into external stylesheets to protect against a variety of surprisingly clever data exfiltration methods that CSS enables.
-> -- [Web Fundamentals tutorial](https://developers.google.com/web/fundamentals/security/csp/)
-
-Put CSS in its own file (e.g. `About.css`) and reference the class in JavaScript:
-
-```
-<SafeHTMLMessage id='stripes-core.about.example' values={{ className: css.isEmptyMessage }} />
-```
-
-translations/en.json:
-
-```
-{
-  "stripes-core.about.example": "Here is some <span class='{className}'>gray text</span>.",
-}
-```
+If you need to add attributes or styling to a given tag/element, it is recommended that you *do not* use this component and [instead use `FormattedMessage` directly with your own render function.](https://formatjs.io/docs/react-intl/components#rich-text-formatting)
