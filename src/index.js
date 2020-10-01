@@ -16,6 +16,9 @@ const SafeHTMLMessage = ({
       strong: (chunks) => <strong>{chunks}</strong>,
       span: (chunks) => <span>{chunks}</span>,
       div: (chunks) => <div>{chunks}</div>,
+      ul: (chunks) => <ul>{chunks}</ul>,
+      ol: (chunks) => <ol>{chunks}</ol>,
+      li: (chunks) => <li>{chunks}</li>,
       ...values,
     }}
   />

@@ -1,6 +1,6 @@
 {
   "name": "@folio/react-intl-safe-html",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Sanitized HTML component",
   "main": "src/index.js",
   "repository": "git@github.com:folio-org/react-intl-safe-html.git",
