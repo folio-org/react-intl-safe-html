@@ -6,7 +6,7 @@
 
 ## [2.1.0](https://github.com/folio-org/react-intl-safe-html/tree/v2.1.0) (IN PROGRESS)
 
-* Add support for list elements `<ul>`, `<ol>` and `<li>`.
+* Add support for `<p>` and list elements `<ul>`, `<ol>` and `<li>`.
 
 ## [2.0.0](https://github.com/folio-org/react-intl-safe-html/tree/v2.0.0) (2020-05-20)
 
