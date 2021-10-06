@@ -1,8 +1,9 @@
 # Change history for react-intl-safe-html
 
-## 3.1.0 (IN PROGRESS)
+## [3.1.0](https://github.com/folio-org/react-intl-safe-html/tree/v3.1.0) (2021-10-05)
 
 * Add deprecation notice; this component is made obsolete by `react-intl` `v4`.
+* Support `react` `v17`.
 
 ## [3.0.0](https://github.com/folio-org/react-intl-safe-html/tree/v3.0.0) (2020-10-16)
 
